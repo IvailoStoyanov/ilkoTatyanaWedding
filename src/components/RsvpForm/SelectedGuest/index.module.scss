@@ -1,0 +1,53 @@
+@import '/src/styles/variables.scss';
+
+.wrapper {
+  margin: 50px 25px 150px 25px;
+  padding: 20px 30px 50px 30px;
+  background: white;
+
+  @media (min-width:$media-s-tablet) {
+    margin: 0 auto 150px auto;
+    max-width: calc(600px - 60px);
+    text-align: center;
+  }
+  
+  @media (min-width:$media-s-desktop) {
+    max-width: calc(1000px - 60px);
+  }
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  width: 25px;
+  padding-right: 7px;
+
+  @media (min-width:$media-s-tablet) {
+    width: 35px;
+  }
+}
+
+.button {
+  margin-top: 10px;
+  font-size: 15px;
+  padding: 15px;
+  background: #edf2f4;
+  border: none;
+  color: #298c53;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background: #2C4F32;
+    color: white;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: auto;
+  }
+}

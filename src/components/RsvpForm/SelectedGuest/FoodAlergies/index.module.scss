@@ -1,0 +1,33 @@
+@import '/src/styles/variables.scss';
+
+.wrapper {
+  padding-bottom: 26px;
+}
+
+.alergiesTitle {
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.answersWrapper {
+  display: flex;
+
+  @media (min-width:$media-s-tablet) {
+    justify-content: center;
+  }
+}
+
+.alergiesAnswer {
+  padding-right: 10px;
+}
+
+.alergiesTextFieldWrapper {
+  display: flex;
+  flex-flow: column;
+
+  textarea {
+    margin-top: 10px;
+    font-size: 15px;
+    padding: 5px;
+  }
+}

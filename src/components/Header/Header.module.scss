@@ -1,0 +1,30 @@
+@import '/src/styles/variables.scss';
+
+.title { 
+  display: none;
+}
+
+.date {
+  text-align: center;
+  margin: 0;
+}
+
+.headerWrapper {
+  transform: translateY(-67px);
+  overflow: hidden;
+
+  @media (min-width:$media-s-tablet) {
+    transform: none;
+  }
+
+  .image {
+    display: block;
+    margin: 0 auto;
+    max-height: 100vh;
+  }
+
+}
+
+.namesImage {
+  margin-bottom: 43px;
+}

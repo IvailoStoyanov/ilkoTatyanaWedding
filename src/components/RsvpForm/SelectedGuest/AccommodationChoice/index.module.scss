@@ -1,0 +1,30 @@
+@import '/src/styles/variables.scss';
+
+.accommodationTitle {
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.answersWrapper {
+  display: flex;
+
+  @media (min-width:$media-s-tablet) {
+    justify-content: center;
+  }
+}
+
+.accommodationAnswer {
+  padding-right: 10px;
+}
+
+.accommodationTextFieldWrapper {
+  display: flex;
+  flex-flow: column;
+  padding-top: 10px;
+
+  textarea {
+    margin-top: 10px;
+    font-size: 15px;
+    padding: 5px;
+  }
+}

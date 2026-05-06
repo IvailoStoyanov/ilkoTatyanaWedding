@@ -1,0 +1,59 @@
+.list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin-bottom: 40px;
+  }
+}
+
+.name {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+
+  p {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  img {
+    margin-left: 5px;
+  };
+}
+
+.icon {
+  width: 15px;
+}
+
+.yesNoWrapper {
+  display: flex;
+}
+
+.answer {
+  padding: 6px 15px 10px 15px;
+  width: 50%;
+  transition: 0.3s ease-in;
+  text-align: center;
+  cursor: pointer;
+  background: #f2f7f9;
+  
+  &:first-of-type {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    background: #dee1e3;
+  }
+}
+
+.active {
+  opacity: 1;
+  background: #298c53;
+  color: white;
+  
+  &:hover {
+    background: #298c53;
+    opacity: 1;
+  }
+}

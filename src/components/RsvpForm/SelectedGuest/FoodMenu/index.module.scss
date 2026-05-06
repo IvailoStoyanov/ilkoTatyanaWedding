@@ -1,0 +1,32 @@
+@import '/src/styles/variables.scss';
+
+.fieldset {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border: 2px solid;
+}
+
+.personalMenuWrapper {
+  padding-bottom: 26px;
+
+  p {
+    margin: 0 0 10px 0;
+  }
+}
+
+.legend {
+  background: #ffffff;
+  font-weight: bold;
+}
+
+.optionsWrapper {
+  display: flex;
+  
+  @media (min-width:$media-s-tablet) {
+    justify-content: center;
+  }
+}
+
+.inputWrapper {
+  padding-right: 10px;
+}
