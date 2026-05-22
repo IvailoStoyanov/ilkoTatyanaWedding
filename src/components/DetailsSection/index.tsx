@@ -1,6 +1,5 @@
 import styles from './index.module.scss';
 import krapetsImage from "../../assets/krapets-beatch.jpeg";
-import Accommodation from './Accommodation';
 
 const DetailsSection = () => {
   return (
@@ -13,7 +12,7 @@ const DetailsSection = () => {
       </div>
 
       <div className={styles.locationDetailsWrapper}>
-        <h2 className={styles.locationAndTransportHeadline}>Локация</h2>
+        <h2 className={styles.locationHeadline}>Локация</h2>
         <div className={`${styles.detailItem}`}>
           <a target="_blank" href='https://maps.app.goo.gl/tBYTjS1Rkr9XVp437'>
             Къмпинг Крапец - Google Maps
@@ -21,7 +20,6 @@ const DetailsSection = () => {
           </a>
         </div>
       </div>
-      <Accommodation />
     </div>
   );
 };

@@ -42,8 +42,7 @@ a:hover {
 
 body {
   margin: 0;
-  background-image: url("./assets/sand/sand-2.jpg");
-  background-size: cover;
+  background: rgb(255, 241, 240);
   color: #298c53;
 }
 

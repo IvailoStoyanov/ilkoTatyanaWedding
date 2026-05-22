@@ -1,7 +1,5 @@
 import { useContext } from 'react';
 import FoodAlergies from './FoodAlergies';
-import AccommodationChoice from './AccommodationChoice';
-import Transport from './Transport';
 import FoodMenu from './FoodMenu';
 import Affirmation from './Affirmation';
 import styles from './index.module.scss';
@@ -48,8 +46,6 @@ const SelectedGuest = () => {
       <Affirmation />
       <FoodMenu/>
       <FoodAlergies />
-      <AccommodationChoice />
-      <Transport />
       <button className={styles.button} onClick={handleSubmit} disabled={isValidSubmit()}>Изпрати потвърждението</button>
     </div>
   )
