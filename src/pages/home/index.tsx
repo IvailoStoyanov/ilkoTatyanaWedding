@@ -1,18 +1,20 @@
 import DetailsSection from "../../components/DetailsSection";
 import Header from "../../components/Header";
+import SubHeader from "../../components/SubHeader";
 import RsvpForm from "../../components/RsvpForm";
 import Timetable from "../../components/Timetable";
 import { GuestsProvider } from "../../contexts/GuestsContext";
+import styles from './index.module.scss';
 
 export default function Home() {
     return (
-        <>
-            <Header title="Светослав и Радостина RSVP покана" />
+        <div className={styles.container}>
+            <Header />
+            <SubHeader />
             <Timetable />
-            <DetailsSection />
             <GuestsProvider>
                 <RsvpForm />
             </GuestsProvider>
-        </>
+        </div>
     )
 }

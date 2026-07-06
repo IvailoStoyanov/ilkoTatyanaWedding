@@ -1,78 +1,123 @@
-@import '/src/styles/variables.scss';
+// @import '/src/styles/variables.scss';
+.newspaper {
+  position: absolute;
+  display: block;
+  width: 90%;
+  z-index: -1;
+}
 
-.timetableWrapper {
-    background: white;
-    margin: 0 25px;
-    
-    @media (min-width: $media-s-tablet) {
-        margin: 140px auto 60px auto;
-        text-align: center;
-        max-width: 600px;
+.start {
+  position: relative;
+  margin-top: 90px;
+  padding-bottom: 35px;
+
+  .newspaper {
+    top: 0;
+    left: calc(50% - 44%);
+    height: 100%;
+  }
+
+  .titleWrapper {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    gap: 10px;
+    justify-content: center;
+
+    img {
+      width: 15%;
     }
-    
-    @media (min-width: $media-s-desktop) {
-        text-align: left;
-        max-width: 1000px;
+
+    img:nth-of-type(2) {
+      transform: rotate(180deg);
     }
+  }
+}
+
+.cardsWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+
+  .timeDescriptionWrapper {
+    position: absolute;
+    // bottom: 0;
+    top: 48%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  h4 {
+    font-size: 30px;
+  }
+
+  p {
+    padding: 0 10px;
+  }
+
+  &.long .timeDescriptionWrapper {
+    top: 38%;
+  }
 }
 
 .sectionTitle {
-    margin: 0 0 20px 0;
-    padding-top: 50px;
+  text-align: center;
+}
+
+.core {
+  position: relative;
+  padding-bottom: 65px;
+
+  .newspaper {
+    top: -40px;
+    left: calc(50% - 46%);
+    height: 100%;
+  }
+}
+
+.party {
+  position: relative;
+  transform: translateY(-70px);
+
+  .newspaper {
+    left: calc(50% - 44%);
+    height: 100%;
+  }
+
+  .partyTitle {
     text-align: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
 
-    @media (min-width: $media-s-tablet) {
-        margin: 0 0 40px 0;
-    }
-}
+  .partyOrPolice {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width: 75%;
+    margin: 0 auto;
+    padding: 20px 0 10px 0;
+  }
 
-.list {
-    list-style: none;
-    padding: 0 25px 50px 25px;
-    margin: 0;
+  .timeDescriptionWrapper {
+    padding: 0 10px 0 0 ;
 
-    @media (min-width: $media-s-tablet) {
-        display: inline-block;
-    }
+  }
 
-    @media (min-width: $media-s-desktop) {
-        display: flex;
-        justify-content: center;
-        padding: 0 25px 80px 25px;
-    }
+  .police {
+    height: 100%;
+    width: 100%;
+  }
 
-    li {
-        display: flex;
-        align-items: center;
-
-        @media (min-width: $media-s-desktop) {
-            flex-flow: column;
-            align-items: baseline;
-            padding-left: 20px;
-            width: 150px;
-
-            p {
-                padding-left: 10px;
-            }
-        }
-    }
-}
-
-.icon {
-    height: 65px;
-    width: 65px;
-    margin-right: 15px;
-}
-
-.largeText {
-    margin-top: -15px;
-
-    @media (min-width: $media-hristo) {
-        margin: 0;
-    }
-}
-
-.time {
-    margin: 0 20px 0 0;
-    font-weight: bold;
+  .card {
+    padding-bottom: 10px;
+  }
 }

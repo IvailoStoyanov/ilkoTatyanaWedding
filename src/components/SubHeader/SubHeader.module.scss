@@ -1,0 +1,67 @@
+// @use '/src/styles/variables.scss' as *;
+
+.subHeader {
+  position: relative;
+  margin-top: 20px;
+  // padding-top: 100px;
+  min-height: 200px;
+}
+
+.ps {
+  text-align: center;
+}
+
+.newspaper {
+  position: absolute;
+  transform: translateY(-110px) ;
+  width: 90%;
+  left: calc(50% - 45%);
+  z-index: -1;
+}
+
+.newspaperDecoration {
+  position: absolute;
+  transform: translateY(-140px) rotate(-3deg);
+  width: 95%;
+  height: 190%;
+  left: calc(50% - 47.5%);
+  z-index: -1;
+}
+
+.horizontalLine {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.dressCodeWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.dressCodeTitle {
+  font-weight: 700;
+}
+
+.bowTie {
+  width: 80px;
+}
+
+.noBabyWrapper {
+  display: flex;
+  border: 1px dashed black;
+  width: 70%;
+  margin: 10px auto;
+  padding: 10px;
+
+  .noBaby {
+    width: 20%;
+    margin-right: 10px;
+  }
+
+  p {
+    padding: 10px;
+  }
+}

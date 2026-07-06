@@ -1,3 +1,4 @@
+'use client';
 import { useContext, useState, KeyboardEvent } from 'react';
 import styles from './index.module.scss';
 import { getGuestMatch } from '../../../api/guests';
@@ -36,7 +37,7 @@ const NamesComponent = () => {
     <>
       <div className={styles.inputsWrapper}>
         <div className={styles.nameInputWrapper}>
-          <label htmlFor="firstName">Вашето име:</label>
+          <label htmlFor="firstName">Вашето име</label>
           <input
             type="text"
             id="firstName"

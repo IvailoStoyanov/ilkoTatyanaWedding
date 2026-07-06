@@ -1,28 +1,33 @@
 @font-face {
-  font-family: 'Karandash-Basil';
-  src: url('/src/assets/fonts/Karandash-Basil-Book.otf');
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Karandash-Basil';
-  src: url('/src/assets/fonts/Karandash-Basil-Regular.otf');
+  font-family: "Montserrat";
+  src: url("/src/assets/fonts/Montserrat-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("/src/assets/fonts/Montserrat-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
 
 @font-face {
-  font-family: 'KaranDash-Basil';
-  src: url('/src/assets/fonts/Karandash-Basil-Bold.otf');
+  font-family: "Montserrat";
+  src: url("/src/assets/fonts/Montserrat-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Salina-Trial";
+  src: url("/src/assets/fonts/Salina-Trial-Bold.otf");
   font-weight: 700;
   font-style: bold;
 }
 
 :root {
-  font-family: 'KaranDash-Basil', sans-serif;
-  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
   font-weight: 200;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -42,13 +47,28 @@ a:hover {
 
 body {
   margin: 0;
-  background: rgb(255, 241, 240);
-  color: #298c53;
+  background: rgb(20, 19, 18);
+  color: #000000;
 }
 
-h1,h2,h3,h4,h5 {
-  text-transform: uppercase;
+h1,
+h2,
+h3,
+h4,
+h5 {
   line-height: 1.1;
+  margin: 0;
+  font-family: "Salina-Trial", sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+p,
+span {
+  margin: 0;
+  font-size: 11px;
 }
 
 h2 {
@@ -60,33 +80,56 @@ a {
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  font-weight: 600;
+  margin-top: 10px;
+  background: rgba(16, 16, 16, 0.9);
+  border: none;
+  color: white;
+  transition: 0.2s ease-in-out;
+  text-transform: uppercase;
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: auto;
+  }
 }
 
 button:hover {
-  border-color: #646cff;
+  transform: scale(1.02);
 }
 
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+label {
+  padding-bottom: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
 
+input {
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  background: rgba(128, 128, 128, 0.5);
+
+  /* @media (min-width: $media-s-tablet) {
+    margin: 0 auto;
+    width: 300px;
+  } */
+}
 
 .formSuccessWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  
+
   .textWrapper {
     text-align: center;
     max-width: 600px;
@@ -99,4 +142,4 @@ button:focus-visible {
       margin: 0;
     }
   }
- }
+}
