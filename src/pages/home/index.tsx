@@ -1,4 +1,3 @@
-import DetailsSection from "../../components/DetailsSection";
 import Header from "../../components/Header";
 import SubHeader from "../../components/SubHeader";
 import RsvpForm from "../../components/RsvpForm";
