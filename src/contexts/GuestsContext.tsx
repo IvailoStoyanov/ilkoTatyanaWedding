@@ -18,8 +18,6 @@ const GuestsProvider = ({ children }: GuestProviderPropsType) => {
         setIsFetching,
     };
 
-    console.log('contexts', guestsMatchContext);
-
     return (
         <GuestsContext.Provider value={data}>
             {children}

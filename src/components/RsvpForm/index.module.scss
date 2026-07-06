@@ -1,8 +1,6 @@
 @import '/src/styles/variables.scss';
 
 .formWrapper {
-  // transform: translateY(-40px);
-  // overflow: hidden;
   position: relative;
   padding: 25px;
   width: 90%;
@@ -10,13 +8,6 @@
   h2, p {
     text-align: center;
   }
-
-  // p {
-  //   margin: 20px auto 30px auto;
-  //   width: 275px;
-  //   text-align: center;
-  // }
-
 }
 
 .titleWrapper {
