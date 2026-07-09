@@ -37,7 +37,7 @@
 
 a {
   font-weight: 500;
-  color: #298c53;
+  color: #000000;
   text-decoration: inherit;
 }
 
@@ -61,10 +61,6 @@ h5 {
   font-family: "Salina-Trial", sans-serif;
 }
 
-h1 {
-  text-transform: uppercase;
-}
-
 p,
 span {
   margin: 0;
@@ -85,7 +81,6 @@ button {
   font-family: inherit;
   cursor: pointer;
   font-weight: 600;
-  margin-top: 10px;
   background: rgba(16, 16, 16, 0.9);
   border: none;
   color: white;
@@ -117,29 +112,21 @@ input {
   border-radius: 2px;
   padding: 10px;
   background: rgba(128, 128, 128, 0.5);
-
-  /* @media (min-width: $media-s-tablet) {
-    margin: 0 auto;
-    width: 300px;
-  } */
 }
 
-.formSuccessWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
 
-  .textWrapper {
-    text-align: center;
-    max-width: 600px;
-    margin: auto 0;
-    padding: 30px;
-    background: white;
+@media (min-width: 768px) {
+  p, span {
+    font-size: 16px;
+  }
 
-    h1 {
-      font-size: 40px;
-      margin: 0;
-    }
+  h3 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  p, span {
+    font-size: 18px;
   }
 }

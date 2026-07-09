@@ -1,0 +1,72 @@
+@use "../../styles/variables.scss" as *;
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  box-sizing: border-box;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 36px 24px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+}
+
+.newspaper {
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  width: calc(100% + 28px);
+  height: calc(100% + 28px);
+  object-fit: fill;
+  z-index: 0;
+  pointer-events: none;
+}
+
+h1 {
+  font-size: clamp(22px, 6vw, 34px);
+  line-height: 1.15;
+}
+
+p + p {
+  margin-top: 10px;
+}
+
+@media (min-width: $media-s-tablet) {
+  .card {
+    max-width: 460px;
+  }
+
+  .content {
+    padding: 48px 40px;
+  }
+
+  .newspaper {
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+  }
+
+  h1 {
+    margin-bottom: 32px;
+  }
+
+  p + p {
+    margin-top: 14px;
+  }
+}

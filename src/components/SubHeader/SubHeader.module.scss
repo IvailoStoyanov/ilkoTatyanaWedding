@@ -1,9 +1,6 @@
-// @use '/src/styles/variables.scss' as *;
-
 .subHeader {
   position: relative;
   margin-top: 20px;
-  // padding-top: 100px;
   min-height: 200px;
 }
 
@@ -15,6 +12,7 @@
   position: absolute;
   transform: translateY(-110px) ;
   width: 90%;
+  height: calc(100% + 140px);
   left: calc(50% - 45%);
   z-index: -1;
 }

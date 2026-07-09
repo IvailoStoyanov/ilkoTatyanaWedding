@@ -16,7 +16,6 @@ const NamesList = () => {
     guestsMatchContext,
     setGuestsGroupContext,
   } = context;
-  
 
   return (
     <>

@@ -17,8 +17,8 @@ export async function getGuestMatch(
             setIsFetching(false);
             setGuestsMatchContext(response.data);
         })
-        .catch(error => {
-            console.error('There was a problem with the request:', error);
+        .catch(() => {
+            setIsFetching(false);
         });
 }
 
@@ -34,9 +34,7 @@ export async function getGroup(
             })
             setGuestsGroupContext(modifiedRecords);
         })
-        .catch(error => {
-            console.error('There was a problem with the request:', error);
-        });
+        .catch(() => {});
 }
 
 export async function updateGuestGroup(updatedData: RecordType[]) {
@@ -52,21 +50,15 @@ export async function updateGuestGroup(updatedData: RecordType[]) {
         })
     }
 
-    try {
-        const response = await axios.patch(
-            `${baseURL}/api/guests`,
-            structuredData,
-            {
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            }
-        );
+    const response = await axios.patch(
+        `${baseURL}/api/guests`,
+        structuredData,
+        {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        }
+    );
 
-        return response.data;
-    } catch (error) {
-        console.error('Error updating guest group:', error);
-        throw error;
-    }
+    return response.data;
 }
-

@@ -19,7 +19,7 @@
 
   img {
     margin-left: 5px;
-  };
+  }
 }
 
 .icon {
@@ -31,13 +31,16 @@
 }
 
 .answer {
+  display: flex;
   padding: 6px 15px 10px 15px;
   width: 50%;
   transition: 0.3s ease-in;
   text-align: center;
   cursor: pointer;
   background: #f2f7f9;
-  
+  flex-direction: column;
+  justify-content: center;
+
   &:first-of-type {
     margin-right: 10px;
   }
@@ -49,11 +52,11 @@
 
 .active {
   opacity: 1;
-  background: #298c53;
+  background: #000000;
   color: white;
   
   &:hover {
-    background: #298c53;
+    background: #000000;
     opacity: 1;
   }
 }

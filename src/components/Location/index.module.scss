@@ -1,0 +1,98 @@
+@use '/src/styles/variables.scss' as *;
+
+.newspaper {
+  position: absolute;
+  display: block;
+  width: 90%;
+  z-index: -1;
+}
+
+.locationWrapper {
+  position: relative;
+  padding-bottom: 35px;
+
+  .newspaper {
+    top: 0;
+    left: calc(50% - 44%);
+    height: 100%;
+  }
+
+  .titleWrapper {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    gap: 10px;
+    justify-content: center;
+
+    img {
+      width: 15%;
+    }
+
+    img:nth-of-type(2) {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.locationContentWrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+}
+
+.cabinWrapper {
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.pinIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.carrageWrapper {
+  position: relative;
+}
+
+.boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  position: absolute;
+  bottom: 0;
+
+  .link, p {
+    font-size: 10px;
+  }
+
+  .textBox {
+    text-align: center;
+  }
+}
+
+@media (min-width: $media-s-desktop) {
+  .locationContentWrapper {
+    width: 70%;
+  }
+}

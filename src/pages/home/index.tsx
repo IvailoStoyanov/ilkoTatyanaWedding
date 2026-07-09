@@ -2,6 +2,7 @@ import Header from "../../components/Header";
 import SubHeader from "../../components/SubHeader";
 import RsvpForm from "../../components/RsvpForm";
 import Timetable from "../../components/Timetable";
+import Location from "../../components/Location";
 import { GuestsProvider } from "../../contexts/GuestsContext";
 import styles from './index.module.scss';
 
@@ -14,6 +15,7 @@ export default function Home() {
             <GuestsProvider>
                 <RsvpForm />
             </GuestsProvider>
+            <Location />
         </div>
     )
 }

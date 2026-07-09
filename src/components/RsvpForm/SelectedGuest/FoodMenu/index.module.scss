@@ -1,4 +1,4 @@
-@import '/src/styles/variables.scss';
+@use '/src/styles/variables.scss' as *;
 
 .fieldset {
   margin-bottom: 20px;
@@ -15,16 +15,11 @@
 }
 
 .legend {
-  background: #ffffff;
   font-weight: bold;
 }
 
 .optionsWrapper {
   display: flex;
-  
-  @media (min-width:$media-s-tablet) {
-    justify-content: center;
-  }
 }
 
 .inputWrapper {

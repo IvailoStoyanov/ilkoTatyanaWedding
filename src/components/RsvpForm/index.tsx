@@ -1,12 +1,10 @@
 import { useContext } from "react";
 import SelectedGuest from "./SelectedGuest";
 import NamesComponent from "./NamesComponent";
-import NamesList from "./NamesList";
 import styles from "./index.module.scss";
 import { GuestsContext } from "../../contexts/GuestsContext";
-import LoadingNames from "./LoadingNames";
 import titleWolverine from "../../assets/title-wolverine.svg";
-import newspaper from "../../assets/background.png";
+import newspaper from "../../assets/background-two.png";
 import underline from "../../assets/underline.svg";
 
 const RsvpForm = () => {
@@ -16,9 +14,8 @@ const RsvpForm = () => {
     return null;
   }
 
-  const { guestsGroupContext, isFetching } = context;
+  const { guestsGroupContext } = context;
 
-  // TODO: remove form autofocus zoom because on next form name select it doesnt zoom out back
   return guestsGroupContext?.length ? (
     <SelectedGuest />
   ) : (
@@ -38,7 +35,6 @@ const RsvpForm = () => {
 
       <div className={styles.namesWrapper}>
         <NamesComponent />
-        {isFetching ? <LoadingNames /> : <NamesList />}
       </div>
     </div>
   );

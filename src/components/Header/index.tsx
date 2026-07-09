@@ -4,9 +4,11 @@ import backgroundImage from "../../assets/background.png";
 import portrait from "../../assets/header/ilko-and-tatyana.jpg";
 import horizontalLine from "../../assets/horizontal-line.svg";
 
-// import { useIsMobile } from "../../hooks/useIsMobile";
+import { useIsMobile } from "../../hooks/useIsMobile";
 
 export default function Header() {
+  const isMobile = useIsMobile();
+
   return (
     <header className={styles.header}>
       <img
@@ -33,27 +35,38 @@ export default function Header() {
           </p>
         </div>
         <div className={styles.dateAndLocationBig}>
-          <img
-            className={styles.horizontalLine}
-            src={horizontalLine}
-            alt="Location"
-          />
+          {isMobile && (
+            <img
+              className={styles.horizontalLine}
+              src={horizontalLine}
+              alt="Location"
+            />
+          )}
           <div className={styles.dateAndLocationContent}>
             <h3>21 Август, 2026 </h3>
             <span>
               Голдън Парк, Варна <br /> k.к. Златни пясъци
             </span>
           </div>
+          {isMobile && (
+            <img
+              className={styles.horizontalLine}
+              src={horizontalLine}
+              alt="Location"
+            />
+          )}
+        </div>
+        {!isMobile && (
           <img
             className={styles.horizontalLine}
             src={horizontalLine}
             alt="Location"
           />
-        </div>
+        )}
         <div className={styles.bestGuys}>
           <span>Кумуват нашите приятели:</span>
           <h3>
-            Елица Момчева <br />и Владимир Илиев
+            Елица Момчева {isMobile ? <br /> : " "} и Владимир Илиев
           </h3>
         </div>
       </div>

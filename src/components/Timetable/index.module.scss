@@ -1,4 +1,4 @@
-// @import '/src/styles/variables.scss';
+@use '/src/styles/variables.scss' as *;
 
 .newspaper {
   position: absolute;
@@ -65,7 +65,7 @@
   }
 
   &.long .timeDescriptionWrapper {
-    top: 38%;
+    top: 48%;
   }
 }
 
@@ -119,5 +119,64 @@
 
   .card {
     padding-bottom: 10px;
+  }
+}
+
+@media (min-width: $media-s-tablet) {
+  .cardsWrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .card .timeDescriptionWrapper {
+    padding: 40px;
+  }
+
+  .core .timeDescriptionWrapper{
+    padding: 10px;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .partyTitleWrapper {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    text-align: center;
+
+    h4 {
+      font-size: 25px;
+    }
+  }
+
+  .wide {
+    img {
+      position: absolute;
+      height: calc(103%);
+      left: -8%;
+    }
+  }
+}
+
+@media (min-width: $media-s-desktop) {
+
+  .timeDescriptionWrapper {
+    padding: 30px;
+  }
+
+  .card {
+    h4 {
+      font-size: 40px;
+    }
+  }
+
+  .core .timeDescriptionWrapper{
+    padding: 30px;
+    
+    p {
+      font-size: 18px;
+    }
   }
 }

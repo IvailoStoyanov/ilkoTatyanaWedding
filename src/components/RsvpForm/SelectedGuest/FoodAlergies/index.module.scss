@@ -1,4 +1,4 @@
-@import '/src/styles/variables.scss';
+@use '/src/styles/variables.scss' as *;
 
 .wrapper {
   padding-bottom: 26px;
@@ -11,10 +11,6 @@
 
 .answersWrapper {
   display: flex;
-
-  @media (min-width:$media-s-tablet) {
-    justify-content: center;
-  }
 }
 
 .alergiesAnswer {

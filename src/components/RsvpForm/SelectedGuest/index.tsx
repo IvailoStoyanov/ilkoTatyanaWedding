@@ -1,13 +1,14 @@
-import { useContext } from 'react';
-import FoodAlergies from './FoodAlergies';
-import FoodMenu from './FoodMenu';
-import Affirmation from './Affirmation';
-import styles from './index.module.scss';
-import { GuestsContext } from '../../../contexts/GuestsContext';
-import { updateGuestGroup } from '../../../api/guests';
-import user from '../../../assets/user.svg';
-import group from '../../../assets/group.svg';
-import { useNavigate } from 'react-router-dom';
+import { useContext } from "react";
+import FoodAlergies from "./FoodAlergies";
+import FoodMenu from "./FoodMenu";
+import Affirmation from "./Affirmation";
+import styles from "./index.module.scss";
+import { GuestsContext } from "../../../contexts/GuestsContext";
+import { updateGuestGroup } from "../../../api/guests";
+import user from "../../../assets/user.svg";
+import group from "../../../assets/group.svg";
+import { useNavigate } from "react-router-dom";
+import newspaper from "../../../assets/background-two.png";
 
 const SelectedGuest = () => {
   const context = useContext(GuestsContext);
@@ -16,39 +17,48 @@ const SelectedGuest = () => {
     return null;
   }
 
-  const {
-    guestsGroupContext,
-  } = context;
+  const { guestsGroupContext } = context;
 
   const navigate = useNavigate();
 
   const handleSubmit = () => {
     updateGuestGroup(guestsGroupContext);
-    navigate('/formSuccess');
-  }
+    navigate("/formSuccess");
+  };
 
   const isValidSubmit = () => {
-    const inactiveGuestStatus = guestsGroupContext.find(guest => guest.fields.status === "Waiting for reply");
+    const inactiveGuestStatus = guestsGroupContext.find(
+      (guest) => guest.fields.status === "Waiting for reply",
+    );
 
-    return !!inactiveGuestStatus
-  }
+    return !!inactiveGuestStatus;
+  };
 
   return (
     <div className={styles.wrapper}>
-      <h3 className={styles.heading}>
-        <img
-          src={guestsGroupContext.length === 1 ? user : group}
-          alt="Netlify Logo"
-          className={styles.icon} />
-        {guestsGroupContext[0].fields.groupName}
-      </h3>
-
-      <Affirmation />
-      <FoodMenu/>
-      <FoodAlergies />
-      <button className={styles.button} onClick={handleSubmit} disabled={isValidSubmit()}>Изпрати потвърждението</button>
+      <img src={newspaper} alt="Newspaper" className={styles.newspaper} />
+      <div className={styles.content}>
+        <h3 className={styles.heading}>
+          <img
+            src={guestsGroupContext.length === 1 ? user : group}
+            alt="Netlify Logo"
+            className={styles.icon}
+          />
+          {guestsGroupContext[0].fields.groupName}
+        </h3>
+        <Affirmation />
+        <FoodMenu />
+        <FoodAlergies />
+        <button
+          className={styles.button}
+          onClick={handleSubmit}
+          disabled={isValidSubmit()}
+        >
+          Изпрати потвърждението
+        </button>
+      </div>
     </div>
-  )
+  );
 };
 
 export default SelectedGuest;

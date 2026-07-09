@@ -1,20 +1,42 @@
-import { useContext, useState } from 'react';
-import styles from './index.module.scss';
-import { getGroup } from '../../../api/guests';
-import { GuestsContext } from '../../../contexts/GuestsContext';
+import { useContext, useEffect, useState } from "react";
+import styles from "./index.module.scss";
+import { getGroup } from "../../../api/guests";
+import { GuestsContext } from "../../../contexts/GuestsContext";
 
 const NamesList = () => {
   const context = useContext(GuestsContext);
-  const [currentInvSelection, setCurrentInvSelection] = useState('');
+  const [currentInvSelection, setCurrentInvSelection] = useState("");
 
   if (context === null) {
     return null;
   }
 
-  const {
-    guestsMatchContext,
-    setGuestsGroupContext,
-  } = context;
+  const { guestsMatchContext, setGuestsGroupContext } = context;
+
+  const mockGuestsMatchContext = [
+    {
+      id: "recoAaGZRu4h6xvzx",
+      fields: {
+        groupId: "recoAaGZRu4h6xvzxrecfcich1xDGssNL7",
+        groupName: "Стоянови",
+        name: "Ивайло Стоянов",
+        status: "Waiting for reply",
+      },
+    },
+    {
+      id: "recoAaGZRu4h6xvsdо",
+      fields: {
+        groupId: "recoAaGZRu4h6xvzxrecfcich1xDGssNL7",
+        groupName: "Стоянови",
+        name: "Радина Стоянов",
+        status: "Waiting for reply",
+      },
+    },
+  ];
+
+  useEffect(() => {
+    setGuestsGroupContext(mockGuestsMatchContext);
+  }, []);
 
   if (!guestsMatchContext.length) {
     return null;
@@ -49,4 +71,3 @@ const NamesList = () => {
 };
 
 export default NamesList;
-

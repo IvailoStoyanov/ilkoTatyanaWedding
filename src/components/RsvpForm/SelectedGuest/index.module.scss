@@ -1,19 +1,10 @@
-@import '/src/styles/variables.scss';
+@use "/src/styles/variables.scss" as *;
 
 .wrapper {
-  margin: 50px 25px 150px 25px;
-  padding: 20px 30px 50px 30px;
-  background: white;
+  position: relative;
+  padding-bottom: 40px;
 
-  @media (min-width:$media-s-tablet) {
-    margin: 0 auto 150px auto;
-    max-width: calc(600px - 60px);
-    text-align: center;
-  }
-  
-  @media (min-width:$media-s-desktop) {
-    max-width: calc(1000px - 60px);
-  }
+  margin: 0 auto;
 }
 
 .heading {
@@ -24,30 +15,29 @@
 .icon {
   width: 25px;
   padding-right: 7px;
-
-  @media (min-width:$media-s-tablet) {
-    width: 35px;
-  }
 }
 
-.button {
-  margin-top: 10px;
-  font-size: 15px;
-  padding: 15px;
-  background: #edf2f4;
-  border: none;
-  color: #298c53;
-  cursor: pointer;
-  border-radius: 2px;
-  transition: 0.2s ease-in-out;
+.newspaper {
+  position: absolute;
+  top: -50px;
+  width: 100%;
+  height: calc(100% + 50px);
+  z-index: -1;
+}
 
-  &:hover {
-    background: #2C4F32;
-    color: white;
+.content {
+  width: 69%;
+  margin: 0 auto 30px auto;
+  border: 1px dashed #000;
+  padding: 20px;
+}
+
+@media (min-width: $media-s-tablet) {
+  .wrapper {
+    padding-top: 50px;
   }
 
-  &:disabled {
-    opacity: 0.3;
-    cursor: auto;
+  .newspaper {
+    top: -20px;
   }
 }
