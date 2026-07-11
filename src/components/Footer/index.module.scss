@@ -1,0 +1,43 @@
+@use "/src/styles/variables.scss" as *;
+
+.footerWrapper {
+  position: relative;
+  padding-bottom: 35px;
+  margin-top: 30px;
+  overflow: hidden;
+
+  .newspaper {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 44%);
+    width: 90%;
+    height: 150%;
+    z-index: -1;
+  }
+
+  .titleWrapper {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    gap: 30px;
+    justify-content: center;
+
+    img {
+      width: 13%;
+    }
+
+    img:nth-of-type(2) {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.sectionTitle {
+  text-align: center;
+}
+
+@media (min-width: $media-s-desktop) {
+  .footerWrapper .titleWrapper {
+    padding-top: 60px;
+  }
+}
