@@ -122,6 +122,17 @@
   }
 }
 
+.partyTitleContent {
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 7px;
+    left: 20%;
+    width: 60%;
+  }
+}
+
 @media (min-width: $media-s-tablet) {
   .cardsWrapper {
     grid-template-columns: repeat(3, 1fr);
@@ -148,6 +159,17 @@
 
     h4 {
       font-size: 25px;
+    }
+  }
+
+  .partyTitleContent {
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100%;
     }
   }
 

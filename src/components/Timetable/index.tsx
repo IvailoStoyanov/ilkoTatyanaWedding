@@ -12,6 +12,7 @@ import partyDesktop from "../../assets/timetableIcons/party-desktop.svg";
 import newspaper from "../../assets/background.png";
 import titleWolverine from "../../assets/title-wolverine.svg";
 import police from "../../assets/timetableIcons/police.svg";
+import elipse from "../../assets/timetableIcons/elipse.svg";
 import { useIsMobile } from "../../hooks/useIsMobile";
 
 import styles from "./index.module.scss";
@@ -110,9 +111,12 @@ const Timetable = () => {
           )}
           {!isMobile && (
             <div className={styles.partyTitleWrapper}>
-              <h4 className={styles.partyTitle}>
-                ВСЯКО НАПУСКАНЕ <br /> ПРЕДИ 01:00 <br /> НЯМА ДА СЕ ТОЛЕРИРА!
-              </h4>
+              <div className={styles.partyTitleContent}>
+                <h4 className={styles.partyTitle}>
+                  ВСЯКО НАПУСКАНЕ <br /> ПРЕДИ 01:00 <br /> НЯМА ДА СЕ ТОЛЕРИРА!
+                </h4>
+                <img src={elipse} alt="elipse" />
+              </div>
               <img className={styles.police} src={police} alt="police" />
             </div>
           )}
@@ -123,9 +127,12 @@ const Timetable = () => {
           <img className={styles.newspaper} src={newspaper} alt="newspaper" />
           <div className={styles.partyOrPolice}>
             <div className={styles.partyInformationWrapper}>
-              <h4 className={styles.partyTitle}>
-                ВСЯКО НАПУСКАНЕ <br /> ПРЕДИ 01:00 <br /> НЯМА ДА СЕ ТОЛЕРИРА!
-              </h4>
+              <div className={styles.partyTitleContent}>
+                <h4 className={styles.partyTitle}>
+                  ВСЯКО НАПУСКАНЕ <br /> ПРЕДИ 01:00 <br /> НЯМА ДА СЕ ТОЛЕРИРА!
+                </h4>
+                <img src={elipse} alt="elipse" />
+              </div>
               <div className={styles.card}>
                 <img src={party} alt="party" />
                 <div className={styles.timeDescriptionWrapper}>
