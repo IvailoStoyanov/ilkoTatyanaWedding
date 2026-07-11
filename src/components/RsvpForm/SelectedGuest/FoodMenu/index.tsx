@@ -58,7 +58,7 @@ const FoodMenu = () => {
                 defaultChecked={checkIfSelected('Вегитарианско', fields.menu)}
                 onChange={() => handleMenuChange(id, 'Вегитарианско')}
               />
-              <label htmlFor={`veggie${index}`}>Вегитарианско</label>
+              <label htmlFor={`veggie${index}`}>Вегитарианско (основно)</label>
             </div>
           </div>
       </div>

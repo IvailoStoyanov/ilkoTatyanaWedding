@@ -65,7 +65,7 @@
   }
 
   &.long .timeDescriptionWrapper {
-    top: 48%;
+    top: 40%;
   }
 }
 
@@ -179,6 +179,10 @@
       height: calc(103%);
       left: -8%;
     }
+  }
+
+  .card.long .timeDescriptionWrapper {
+    top: 48%;
   }
 }
 

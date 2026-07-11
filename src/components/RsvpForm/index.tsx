@@ -32,7 +32,7 @@ const RsvpForm = () => {
       <p>
         Молим да потвърдите присъствието си
         <br />
-        до 21 Юли, 2026 г.
+        до 25 Юли 2026 г.
       </p>
       <img src={underline} alt="underline" className={styles.underline} />
 

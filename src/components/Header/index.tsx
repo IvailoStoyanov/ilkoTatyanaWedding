@@ -43,7 +43,7 @@ export default function Header() {
             />
           )}
           <div className={styles.dateAndLocationContent}>
-            <h3>21 Август, 2026 </h3>
+            <h3>21 Август 2026 </h3>
             <span>
               Голдън Парк, Варна <br /> k.к. Златни пясъци
             </span>

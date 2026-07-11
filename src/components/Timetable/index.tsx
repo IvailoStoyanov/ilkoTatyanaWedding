@@ -90,7 +90,7 @@ const Timetable = () => {
             <div className={styles.timeDescriptionWrapper}>
               <h4 className={styles.time}>20:00</h4>
               <p className={styles.description}>
-                посрещане на младоженците и празнична програма
+                посрещане на младоженците и вечеря
               </p>
             </div>
           </div>
