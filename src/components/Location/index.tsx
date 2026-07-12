@@ -1,8 +1,6 @@
 import newspaper from "../../assets/background.png";
 import titleWolverine from "../../assets/title-wolverine.svg";
 import carrage from "../../assets/locationIcons/carrage.svg";
-import left from "../../assets/locationIcons/left.svg";
-import right from "../../assets/locationIcons/right.svg";
 import cabin from "../../assets/locationIcons/cabin.svg";
 import pin from "../../assets/locationIcons/pin.svg";
 
