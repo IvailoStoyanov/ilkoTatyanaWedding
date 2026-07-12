@@ -16,19 +16,7 @@
   }
 
   .titleWrapper {
-    display: flex;
-    padding-top: 40px;
-    padding-bottom: 10px;
-    gap: 30px;
-    justify-content: center;
-
-    img {
-      width: 13%;
-    }
-
-    img:nth-of-type(2) {
-      transform: rotate(180deg);
-    }
+    padding: 40px 0 10px;
   }
 }
 

@@ -30,6 +30,10 @@
   display: block;
   width: 80%;
   margin: 10px auto;
+
+  &.inverted {
+    transform: rotate(180deg);
+  }
 }
 
 .dressCodeWrapper {
@@ -49,7 +53,7 @@
 
 .noBabyWrapper {
   display: flex;
-  border: 1px dashed black;
+  align-items: center;
   width: 70%;
   margin: 10px auto;
   padding: 10px;

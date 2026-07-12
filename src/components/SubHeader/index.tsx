@@ -20,6 +20,12 @@ export default function SubHeader() {
         <img className={styles.bowTie} src={bowTie} alt="Bow Tie" />
         <span>Бъдете яки!</span>
       </div>
+      <img
+        className={`${styles.horizontalLine} ${styles.inverted}`}
+        src={horizontalLine}
+        alt="Horizontal Line"
+   
+      />
       <div className={styles.noBabyWrapper}>
         <img
           className={styles.noBaby}
@@ -28,8 +34,8 @@ export default function SubHeader() {
         />
         <p>
           За да може всички да се отпуснем и насладим на празника, решихме
-          нашето сватбено тържество да бъде само за гости над 18 год. Благодарим
-          ви за разбирането!
+          нашето сватбено тържество да бъде само за гости над 18 г. Благодарим
+          Ви за разбирането!
         </p>
       </div>
     </div>

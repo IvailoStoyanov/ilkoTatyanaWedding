@@ -21,7 +21,7 @@
   .titleWrapper {
     display: flex;
     padding-top: 40px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     gap: 10px;
     justify-content: center;
 
@@ -203,6 +203,12 @@
     
     p {
       font-size: 18px;
+    }
+  }
+
+  .start .titleWrapper {
+    img {
+      width: 21%;
     }
   }
 }

@@ -36,13 +36,11 @@ const Timetable = () => {
         </div>
         <div className={styles.carrageWrapper}>
           <div className={styles.carrageIconsWrapper}>
-            <img src={left} alt="left" className={styles.left} />
             <img src={carrage} alt="carrage" />
-            <img src={right} alt="right" className={styles.right} />
           </div>
           <div className={styles.boxes}>
             <div className={styles.textBox}>
-              <h4>ТРИУМФ ТАКСИ</h4>
+              <h4>ТРИУМФ <br /> ТАКСИ</h4>
               <p>+359 52 644 44</p>
               <p>+359 879 644 444</p>
               <a
@@ -50,11 +48,11 @@ const Timetable = () => {
                 target="_blank"
                 className={styles.link}
               >
-                www.triumftaxi.com
+                triumftaxi.com
               </a>
             </div>
             <div className={styles.textBox}>
-              <h4>ХИПО ТАКСИ</h4>
+              <h4>ХИПО <br /> ТАКСИ</h4>
               <p>+359 52 344 444</p>
               <p>+359 876 344 444</p>
               <a
@@ -62,18 +60,18 @@ const Timetable = () => {
                 target="_blank"
                 className={styles.link}
               >
-                www.hippotaxi.bg
+                hippotaxi.bg
               </a>
             </div>
             <div className={styles.textBox}>
-              <h4>ЙЕЛОУ ТАКСИ</h4>
+              <h4>ЙЕЛОУ <br /> ТАКСИ</h4>
               <p>+359 882 021 124</p>
               <a
                 href="https://www.yellow333.com/"
                 target="_blank"
                 className={styles.link}
               >
-                www.yellow333.com
+                yellow333.com
               </a>
             </div>
           </div>

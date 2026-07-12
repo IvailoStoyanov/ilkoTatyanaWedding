@@ -82,10 +82,10 @@
 
 .carrageIconsWrapper {
   display: grid;
-  grid-template-columns: 1fr 6fr 1fr;
 
   img {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
@@ -98,7 +98,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
-  padding: 10px;
+  padding: 20px 10px 10px 10px;
 
   .link,
   p {
@@ -109,7 +109,7 @@
   .textBox {
     text-align: center;
     word-break: break-word;
-    border: 1px solid black;
+    border: 1px dashed black;
     padding: 10px 3px;
 
     h4 {
@@ -126,17 +126,22 @@
   .locationWrapper {
     .titleWrapper {
       padding-top: 60px;
+
+      img {
+        width: 21%;
+      }
     }
   }
 
   .cabinWrapper {
     gap: 30px;
+    grid-template-columns: 30% 1fr;
   }
 
   .boxes {
     .textBox {
-      padding: 30px 0;
-  
+      padding: 20px 0;
+
       .link,
       p {
         font-size: 16px;
@@ -146,11 +151,10 @@
       h4 {
         font-size: 20px;
       }
-  
+
       .link {
         margin-top: 10px;
       }
     }
   }
-
 }
