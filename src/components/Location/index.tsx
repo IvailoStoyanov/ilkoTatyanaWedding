@@ -1,5 +1,4 @@
 import newspaper from "../../assets/background.png";
-import titleWolverine from "../../assets/title-wolverine.svg";
 import carrage from "../../assets/locationIcons/carrage.svg";
 import cabin from "../../assets/locationIcons/cabin.svg";
 import pin from "../../assets/locationIcons/pin.svg";
@@ -11,9 +10,7 @@ const Timetable = () => {
     <div className={styles.locationWrapper}>
       <img className={styles.newspaper} src={newspaper} alt="newspaper" />
       <div className={styles.titleWrapper}>
-        <img src={titleWolverine} alt="titleWolverine" />
         <h2 className={styles.sectionTitle}>Как да стигна?</h2>
-        <img src={titleWolverine} alt="titleWolverine" />
       </div>
       <div className={styles.locationContentWrapper}>
         <div className={styles.cabinWrapper}>

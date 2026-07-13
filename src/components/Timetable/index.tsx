@@ -10,7 +10,6 @@ import dinerDesktop from "../../assets/timetableIcons/diner-desktop.svg";
 import kissDesktop from "../../assets/timetableIcons/kiss-desktop.svg";
 import partyDesktop from "../../assets/timetableIcons/party-desktop.svg";
 import newspaper from "../../assets/background.png";
-import titleWolverine from "../../assets/title-wolverine.svg";
 import police from "../../assets/timetableIcons/police.svg";
 import elipse from "../../assets/timetableIcons/elipse.svg";
 import { useIsMobile } from "../../hooks/useIsMobile";
@@ -24,9 +23,7 @@ const Timetable = () => {
     <div className={styles.timetableWrapper}>
       <div className={styles.start}>
         <div className={styles.titleWrapper}>
-          <img src={titleWolverine} alt="titleWolverine" />
           <h2 className={styles.sectionTitle}>Програма</h2>
-          <img src={titleWolverine} alt="titleWolverine" />
         </div>
         <img className={styles.newspaper} src={newspaper} alt="newspaper" />
         <div className={styles.cardsWrapper}>

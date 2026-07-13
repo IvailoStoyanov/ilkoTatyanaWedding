@@ -5,7 +5,6 @@ import NamesList from "./NamesList";
 import styles from "./index.module.scss";
 import { GuestsContext } from "../../contexts/GuestsContext";
 import LoadingNames from "./LoadingNames";
-import titleWolverine from "../../assets/title-wolverine.svg";
 import newspaper from "../../assets/background-two.png";
 import underline from "../../assets/underline.svg";
 
@@ -25,9 +24,7 @@ const RsvpForm = () => {
     <div className={styles.formWrapper}>
       <img src={newspaper} alt="newspaper" className={styles.newspaper} />
       <div className={styles.titleWrapper}>
-        <img src={titleWolverine} alt="titleWolverine" />
         <h2>Потвърди присъствие</h2>
-        <img src={titleWolverine} alt="titleWolverine" />
       </div>
       <p>
         Молим да потвърдите присъствието си
